@@ -102,7 +102,7 @@ class VectorWind(object):
             # Create a Spharmt object to do the computations.
             self.gridtype = gridtype.lower()
             self.s = Spharmt(nlon, nlat, gridtype=self.gridtype,
-                             rsphere=rsphere)
+                             rsphere=rsphere, legfunc='computed')
         except ValueError:
             if self.gridtype not in ('regular', 'gaussian'):
                 err = 'invalid grid type: {0:s}'.format(repr(gridtype))
